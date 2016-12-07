@@ -1,0 +1,19 @@
+import os
+
+script = str(input('[*] Nome do script> ')
+
+def main(conf):
+	
+	conf = os.system('cat %s | grep -iE 'FEITO PELO ALFA'' % script)
+
+def confirma():
+	if main(conf) == 0:
+		print('Essa belezinha foi FEITO PELO ALFA! Executando :D')
+		os.system('./%s' % script)
+	else:
+		print('Essa bosta não foi FEITO PELO ALFA! Saindo e excluindo.')
+		os.system('rm -rf %s' % script)
+		exit()
+
+if __name__ == '__main__':
+	main()
